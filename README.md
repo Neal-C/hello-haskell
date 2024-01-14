@@ -16,6 +16,23 @@ which can save CPU cycles, at the cost of unpredictable RAM usage at runtime
 
 ## Commands
 
+- try via Docker
+
+clone 
+
+
+```shell
+git clone git@github.com:Neal-C/hello-haskell.git
+cd hello-haskell
+```
+
+build image & run
+
+
+```shell
+docker build -t haskell:helloworld . && docker run haskell:helloword -p 8080:8080
+```
+
 - Install the Glasgow haskhell compiler https://www.haskell.org/ghc/
 - Install Stack https://docs.haskellstack.org/en/stable/ (it's cargo but for haskell)
 ```shell
@@ -33,7 +50,4 @@ stack exec my-project-exe
 ```shell
 ghc --make main.hs -o main
 ```
-- or try via Docker
-```shell
-docker build -t haskell:helloworld . && docker run haskell:helloword -p 8080:8080
-```
+
